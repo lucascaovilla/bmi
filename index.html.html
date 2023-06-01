@@ -1,0 +1,39 @@
+<html>
+    <script>
+        function imc(peso, altura) {
+            var resultado;
+            var status;
+            var menorPesoIdeal;
+            var maiorPesoIdeal;
+            //if (peso > 0 && altura > 0) {
+            resultado = peso / (altura**2);
+            //}
+            if (resultado < 18,5) {
+                status = "Abaixo do peso"
+                menorPesoIdeal = (altura*(18,5**0,5))**2
+                maiorPesoIdeal = (altura*(24,9**0,5))**2
+            } else if (resultado <= 24,9) {
+                status = "Peso ideal"
+            } else if (resultado <= 29,9) {
+                status = "Sobrepeso"
+                menorPesoIdeal = (altura*(18,5**0,5))**2
+                maiorPesoIdeal = (altura*(24,9**0,5))**2
+            } else if (resultado <= 34,9) {
+                status = "Obesidade grau 1"
+                menorPesoIdeal = (altura*(18,5**0,5))**2
+                maiorPesoIdeal = (altura*(24,9**0,5))**2
+            } else if (resultado <= 39,9) {
+                status = "Obesidade grau 2"
+                menorPesoIdeal = (altura*(18,5**0,5))**2
+                maiorPesoIdeal = (altura*(24,9**0,5))**2
+            } else if (resultado >= 40) {
+                status = "Obesidade grau 3 ou mórbida"
+                menorPesoIdeal = (altura*(18,5**0,5))**2
+                maiorPesoIdeal = (altura*(24,9**0,5))**2
+            } else {
+                status = "Valores informados inválidos"
+            }
+            return(console.log(status), console.log(menorPesoIdeal), console.log(maiorPesoIdeal))
+        }
+    </script>
+</html>
